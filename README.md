@@ -1,1 +1,1 @@
-belajarJavascriptDasar
+ini ada repository perjalan saya belajar javascript dasar
