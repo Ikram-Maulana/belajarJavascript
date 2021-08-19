@@ -1,0 +1,96 @@
+Pt. 001
+- EcmaScript Standardnya, JavaScript Bahasanya
+- Kalau di C# itu debug.log(), kalau di JavaScript itu console.log()
+
+Pt. 002
+- Membuat Variabel -> var nama_variabel = datanya -> ex: var x = 5; var y = 6; var z = x + y;
+- Tipe data -> string ("Hello World"), number (21,30,20), Array ([1,2,3]), Boolean (true/false), object ({halo:"dunia"})
+- Cara cek tipe data -> typeof variablenya
+- Array merupakan salah satu jenis dari object
+
+Pt. 003
+- Operator Aritmatika -> +, -, *, %, /, ++, --
+- Operator Assignment -> =, +=, -=, *=, /=, %=
+- Operator Penggabungan String -> var txt1 = "nasi"; var txt2 = "goreng"; var txt3 = txt1 + " " + txt2;
+- Operator Pembanding -> ==, ===, !=, !==, >, <, >=, <=, ?
+- Operator Logika -> &&, ||, !
+- type data number di js itu float jadi bisa tambah koma
+
+Pt. 004
+- For Loop -> for (pernyataan 1; pernyataan2; pernyataan3) { //code }
+- While Loop -> while (kondisi) { //code }
+- Do While Loop -> do { //code } while (kondisi);
+
+Pt. 005
+- If -> if (kondisi) { //code if true }
+- Else -> if (kondisi) { //code if true } else { //code if false }
+- Else If - > if (kondisi) { //code if condition 1 true } else if (kondisi2) { //code if condition 1 false & condition 2 true } else { //code if condition 1 & 2 false }
+- Switch -> switch(expression) { case x: //code break; case y: //code break; default: //code }
+- Untuk Mendapatkan ID -> document.GetElementById
+- Menulis Html di JS -> .InnerHtml = ""
+
+Pt. 006
+- Membuat Fungsi -> function name (param1, param2, ..) { //code }
+- fungsi dengan return -> function kaliAngka (a,b) { return a*b; }
+- Variabel Lokal pada Fungsi -> function fungsiMobil() { var namaMobil = "Avanza"; }
+
+Pt. 007
+- Membuat array
+	1. var mobil = ["Avanza", "Agya", "Ayla"]; (REKOMENDASI)
+	2. var mobil = new Array("Avanza", "Agya", "Ayla");
+- Mengambil data array -> 
+	1. console.log(mobil[0]);
+	2. var mobilPertama = mobil[0];
+	3. var mobilTerakhir = mobil[mobil.length - 1];
+- Mengubah data array -> mobil[0] = "Fortuner";
+- Mencari banyak array -> mobil.length;
+- Mengubah Array Menjadi String -> 
+	1. mobil.toString() //avanza,agya,ayla
+	2. mobil.join(" * ") //avanza * agya *ayla
+- Mencopot Data dari Array -> mobil.pop() // Mencopot Data paling Belakang dari Mobil
+- Me-"Masukkan" Data ke Array -> mobil.push("Fortuner") // Menambah Data ke Paling Belakang Array Mobil
+- Menggabungkan Dua Array ->
+	1. var mobilMahal = ["Fortuner", "Lamborghini"];
+	2. var mobilBudget = ["Avanza", "Agya", "Ayla"];
+	3. var mobil = mobilBugdet.concat(mobilMahal);
+	4. Kalau mau 3 array tinggal pakai koma setelah mobilMahal
+- Iterasi Pada Array ->
+	var mobil = ["Avanza", "Agya", "Ayla"];
+	var text, i;
+	text = "<ul>";
+	for (i = 0; i < mobil.length; i++) {
+		text += "<li>" + mobil[i] + "</li>";
+	}
+	text += "</ul>";
+- Iterasi Pada Array dengan forEach ->
+	var mobil = ["Avanza", "Agya", "Ayla"];
+	var text, i;
+	text = "<ul>";
+	mobil.forEach(fungsiMobil);
+	text += "</ul>";
+	function fungsiMobil(value) {
+		text += "<li>" + value + "</li>";
+	}
+- Iterasi pada Array dengan Map ->
+	var nomor1 = [1,2,3,4,5];
+	var nomor2 = nomor1.map(kalikanDenganDua);
+	function kalikanDenganDua(value, index, array) {
+		return value*2;
+	}
+
+Pt. 008
+- Cara Membuat Object dan Property -> 
+	var mobil = {nama:"Toyota", tipe:"agya", berat:600, warna:"putih"};
+- Kita juga bisa memasukkan function ke object ->
+	var mobil = {
+		nama:"Toyota", 
+		tipe:"agya", 
+		berat:600, 
+		warna:"putih",
+		maju: function(){
+			return "Mobil Melaju";
+		},
+		mundur: function(){
+			return "Mobil Mundur";
+		}
+	};
