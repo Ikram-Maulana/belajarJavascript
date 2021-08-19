@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <div id="datanya"></div>
+  <script>
+    // Mencoba Pengkondisian If Else
+    var lampu = 1;
+
+    if (lampu == 1) {
+      console.log("Lampu nyala");
+    } else {
+      console.log("Lampu mati");
+    }
+
+    // Mencoba Pengkondisian If Else If Else
+    var lampu2 = "merah";
+
+    if (lampu2 == "merah") {
+      console.log("Lampu nyala warna merah");
+    } else if (lampu2 == "kuning") {
+      console.log("Lampu nyala warna kuning");
+    } else if (lampu2 == hijau) {
+      console.log("Lampu nyala warna hijau");
+    } else {
+      console.log("Tidak ada warna lampu tersebut");
+    }
+
+    // Mencoba Pengkondisian Switch Case
+    lampu2 = "pink";
+
+    switch (lampu2) {
+      case "merah":
+        console.log("Lampu nyala warna merah");
+        document.getElementById("datanya").innerHTML = "Lampu nyala warna merah";
+        break;
+      case "kuning":
+        console.log("Lampu nyala warna kuning");
+        document.getElementById("datanya").innerHTML = "Lampu nyala warna kuning";
+        break;
+      case "hijau":
+        console.log("Lampu nyala warna hijau");
+        document.getElementById("datanya").innerHTML = "Lampu nyala warna hijau";
+        break;
+      default:
+        console.log("Tidak ada warna lampu tersebut");
+        document.getElementById("datanya").innerHTML = "Tidak ada warna lampu tersebut";
+    }
+  </script>
+</body>
+
+</html>
