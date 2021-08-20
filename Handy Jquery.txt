@@ -1,0 +1,51 @@
+Pt.001
+- jQuery adalah kumpulan fungsi-fungsi Javascript yang berguna untuk memudahkan penulisan kode Javascript.
+- mempunyai fitur seperti menyederhanakan document traversing, event handling, animating dan interaksi AJAX untuk pengembangan web secara cepat.
+- Pemanggilan JS Disarankan Sebelum Tutup Body Jangan di Head Agar Loading Halaman Menjadi Lebih Cepat
+- Untuk Memastikan jQuery Sudah Terload atau Belum -> ke Inspect, Console, Ketikkan $ atau jQuery
+
+Pt.002
+- Menggunakan jQuery Selector:
+	a. di CSS
+		- p
+		- #container
+		- .article
+	b. di jquery
+		- $("p");
+		- $("#container");
+		- $(".article");
+- contoh, fungsi akan dijalankan ketika document sudah siap ->
+	$("document").ready(function{
+		$("li").text("Indonesia");
+	}); 
+	// kalau untuk button -> .click(function{...
+- Untuk Menyembunyikan Element -> .hide();
+- Untuk Set Text -> .text("...");
+
+Pt.003
+- Bekerja dengan DOM di JQuery Ada 2 Cara:
+1. Css Pseudoclass
+	- Misalnya mencari semua elemen <li> di dalam object yang memiliki id = destinations, kita bisa tuliskan seperti ini -> $("#destinations li");
+	- Misalkan kita hanya mencari elemen anak atau child <li> di dalam object yang dimiliki id = destinations, kita bisa tuliskan seperti ini -> $("#destinations > li");
+	- untuk mencari elemen lebih dari satu, maka kita dapat memakai koma seperti -> $(".promo, #france");
+	- menambahkan css -> .css("background-color", "yellow");
+	- Untuk memilih elemen pertama -> $("#destinations li:first");
+	- Untuk memilih elemen terakhir -> $("#destinations li:last");
+	- Untuk memilih elemen ganjil -> $("#destinations li:odd");
+	- Untuk memilih elemen genap -> $("#destinations li:even");
+2. Menggunakan Fungsi Traversing
+	- .first()
+	Memilih elemen pertama dari elemen yang dipilih
+	- .last()
+	Memilih elemen terakhir dari elemen yang dipilih
+	- .prev()
+	Memilih elemen sebelumnya dari elemen yang dipilih
+	- .next()
+	Memilih elemen berikutnya dari elemen yang dipilih
+	- .children()
+	Memilih elemen anak dari elemen yang dipilih
+	- .find()
+	Memilih elemen anak dan juga elemen-elemen di bawahnya dari elemen yang dipilih
+	- .parent()
+	Memilih elemen parent dari elemen yang dipilih
+
