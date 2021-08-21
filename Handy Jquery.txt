@@ -49,3 +49,21 @@ Pt.003
 	- .parent()
 	Memilih elemen parent dari elemen yang dipilih
 
+Pt.004
+- Memanipulasi DOM di jQuery:
+	1. Manipulasi Add
+		- .before(<element>)
+		- .after(<element>)
+		- .append(<element>)
+		- .prepend(<element>)
+	ex penggunaan:
+		var price = $('<p>From $399.99</p>');
+		$('.vacation').before(price);
+	2. Alternatif
+		- .insertBefore(<element>)
+		- .insertAfter(<element>)
+		- .prependTo(<element>)
+		- .appendTo(<element>)
+	ex penggunaan:
+		var price = $('<p>From $399.99</p>');
+		price.insertBefore($('.vacation'));
