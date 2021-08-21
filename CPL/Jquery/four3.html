@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <h1>Kemana kamu ingin pergi?</h1>
+  <ul class="lokasi">
+    <li class="bandung">Bandung</li>
+    <li class="sukabumi">Sukabumi</li>
+    <li class="jogja"><strong>Yogyakarta</strong></li>
+    <li><input type="text" name="inputan" class="inputan" value="100"></li>
+  </ul>
+
+  <script src="jquery-3.6.0.min.js"></script>
+  <script>
+    // Mencoba Set Text, HTML dan Val
+    $("document").ready(function () {
+      $(".bandung").text("Cimahi");
+      $(".jogja").html("<em>Yogyakarta</em>");
+      $(".inputan").val(150)
+    });
+  </script>
+</body>
+
+</html>
