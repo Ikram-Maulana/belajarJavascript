@@ -81,3 +81,8 @@ Pt.004
 			Mengatur konten elemen yang dipilih (markup HTML)
 		- .val(konten)
 			Menetapkan atau mengembalikan value pada form
+	4. DELETE
+		- .remove()
+			Menghapus elemen dan elemen di dalamnya (child)
+		- .empty()
+			Menghapus elemen di dalamnya saja (child)
