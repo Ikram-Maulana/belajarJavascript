@@ -67,10 +67,17 @@ Pt.004
 	ex penggunaan:
 		var price = $('<p>From $399.99</p>');
 		price.insertBefore($('.vacation'));
-	2. Manipulasi GET
-		- text()
+	2. GET
+		- .text()
 			Mengembalikan konten text dari elemen yang dipilih
-		- html()
+		- .html()
 			Mengembalikan konten elemen yang dipilih (Termasuk markup HTML)
-		- val()
+		- .val()
 			Mengembalikan value pada form
+	3. SET
+		- .text(konten)
+			Mengatur konten teks dari elemen yang dipilih 
+		- .html(konten)
+			Mengatur konten elemen yang dipilih (markup HTML)
+		- .val(konten)
+			Menetapkan atau mengembalikan value pada form
