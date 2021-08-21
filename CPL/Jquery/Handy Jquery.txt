@@ -59,7 +59,7 @@ Pt.004
 	ex penggunaan:
 		var price = $('<p>From $399.99</p>');
 		$('.vacation').before(price);
-	2. Alternatif
+	** Alternatif Penulisan
 		- .insertBefore(<element>)
 		- .insertAfter(<element>)
 		- .prependTo(<element>)
@@ -67,3 +67,10 @@ Pt.004
 	ex penggunaan:
 		var price = $('<p>From $399.99</p>');
 		price.insertBefore($('.vacation'));
+	2. Manipulasi GET
+		- text()
+			Mengembalikan konten text dari elemen yang dipilih
+		- html()
+			Mengembalikan konten elemen yang dipilih (Termasuk markup HTML)
+		- val()
+			Mengembalikan value pada form
