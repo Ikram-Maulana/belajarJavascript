@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <h1>Kemana kamu ingin pergi?</h1>
+  <ul>
+    <li class="korea">Bandung</li>
+    <li>Sukabumi</li>
+    <li>Yogyakarta</li>
+  </ul>
+
+  <script src="jquery-3.6.0.min.js"></script>
+  <script>
+    // Akan Dijalankan Setelah Dokumen Siap
+    $("document").ready(function () {
+      console.log("Jquery Sudah Jalan");
+      $("li").text("Indonesia");
+      $(".korea").text("Korea Selatan");
+    });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <h1>Kemana kamu ingin pergi?</h1>
+  <ul class="lokasi">
+    <li class="bandung">
+      Bandung
+      <button id="keBandung">Pergi!</button>
+      <button id="hideBandung">H</button>
+      <button id="hapusBandung">X</button>
+    </li>
+    <li class="sukabumi">
+      Sukabumi
+    </li>
+    <li class="jogja">
+      Yogyakarta
+    </li>
+  </ul>
+  <button id="toggleBandung">Toggle Bandung</button>
+  <button id="toggleSukabumi">Toggle Sukabumi</button>
+
+  <script src="jquery-3.6.0.min.js"></script>
+  <script>
+    // Mencoba Animate
+    $("document").ready(function () {
+      $("#keBandung").on("click", function () {
+        alert("Saya Akan Pergi ke Bandung");
+      });
+      $("#hapusBandung").on("click", function () {
+        $(".bandung").remove();
+        alert("Bandung dihapus");
+      });
+
+      $("#hideBandung").on("click", function () {
+        $(".bandung").slideUp();
+      });
+      $("#toggleBandung").on("click", function () {
+        $(".bandung").fadeToggle();
+      });
+      $("#toggleSukabumi").on("click", function () {
+        $(".sukabumi").animate({
+          marginLeft: 200
+        }, 1000);
+      });
+    });
+  </script>
+</body>
+
+</html>

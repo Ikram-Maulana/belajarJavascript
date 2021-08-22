@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <h1 id="sample">Where do you want to go</h1>
+  <h2>Travel Destinations</h2>
+  <p>Plan your next adventure</p>
+  <ul id="destinations">
+    <li>Rome</li>
+    <li>Paris</li>
+    <li>Bali</li>
+  </ul>
+  <button>Aksi</button>
+
+  <script src="jquery-3.6.0.min.js"></script>
+  <script>
+    // Id Selector
+    $("document").ready(function () {
+      $("button").click(function () {
+        $("#destinations").text("Rome, Paris or Bali?");
+      });
+    });
+  </script>
+</body>
+
+</html>

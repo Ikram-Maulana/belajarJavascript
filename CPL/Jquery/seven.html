@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .merah {
+      color: red;
+    }
+
+    .biru {
+      color: blue;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Kemana kamu ingin pergi?</h1>
+  <ul>
+    <li class="bandung">Bandung</li>
+    <li class="sukabumi">Sukabumi</li>
+    <li class="jogja">Yogyakarta</li>
+  </ul>
+  <button id="gantiBandungJadiBiru">Ganti Biru!</button>
+  <button id="gantiBandungJadiMerah">Ganti Merah!</button>
+  <button id="gantiBandungJadiBesar">Ganti Ukuran!</button>
+
+  <script src="jquery-3.6.0.min.js"></script>
+  <script>
+    // Mencoba manipulasi css dalam javascript
+    $("document").ready(function () {
+      // $(".bandung").addClass("merah");
+      $("#gantiBandungJadiBiru").on("click", function () {
+        $(".bandung").removeClass("merah");
+        $(".bandung").addClass("biru");
+      });
+      $("#gantiBandungJadiMerah").on("click", function () {
+        $(".bandung").removeClass("biru");
+        $(".bandung").addClass("merah");
+      });
+
+      // Mencoba css
+      $("#gantiBandungJadiBesar").on("click", function () {
+        $(".bandung").css({
+          fontSize: 100
+        });
+      });
+    });
+  </script>
+</body>
+
+</html>

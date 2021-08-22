@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <h1>Kemana kamu ingin pergi?</h1>
+  <ul class="lokasi">
+    <li>Bandung</li>
+    <li>Sukabumi</li>
+    <li>Yogyakarta</li>
+  </ul>
+
+  <script src="jquery-3.6.0.min.js"></script>
+  <script>
+    // Mencoba Menambahkan Lokasi Append, Prepend dan Before
+    $("document").ready(function () {
+      var jakarta = $("<li>Jakarta</li>");
+      var bali = $("<li>Bali</li>");
+
+      var subJudul = $("<h2>Pilih destinasimu sekarang juga</h2>");
+
+      $(".lokasi").prepend(jakarta);
+      $(".lokasi").append(bali);
+
+      $(".lokasi").before(subJudul);
+    });
+  </script>
+</body>
+
+</html>
