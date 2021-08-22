@@ -25,6 +25,7 @@
     </li>
   </ul>
   <button id="toggleBandung">Toggle Bandung</button>
+  <button id="toggleSukabumi">Toggle Sukabumi</button>
 
   <script src="jquery-3.6.0.min.js"></script>
   <script>
@@ -43,6 +44,11 @@
       });
       $("#toggleBandung").on("click", function () {
         $(".bandung").fadeToggle();
+      });
+      $("#toggleSukabumi").on("click", function () {
+        $(".sukabumi").animate({
+          marginLeft: 200
+        }, 1000);
       });
     });
   </script>
