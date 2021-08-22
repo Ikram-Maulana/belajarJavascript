@@ -26,6 +26,7 @@
   </ul>
   <button id="gantiBandungJadiBiru">Ganti Biru!</button>
   <button id="gantiBandungJadiMerah">Ganti Merah!</button>
+  <button id="gantiBandungJadiBesar">Ganti Ukuran!</button>
 
   <script src="jquery-3.6.0.min.js"></script>
   <script>
@@ -39,6 +40,13 @@
       $("#gantiBandungJadiMerah").on("click", function () {
         $(".bandung").removeClass("biru");
         $(".bandung").addClass("merah");
+      });
+
+      // Mencoba css
+      $("#gantiBandungJadiBesar").on("click", function () {
+        $(".bandung").css({
+          fontSize: 100
+        });
       });
     });
   </script>
