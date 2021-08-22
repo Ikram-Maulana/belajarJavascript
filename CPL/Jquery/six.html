@@ -24,6 +24,7 @@
       Yogyakarta
     </li>
   </ul>
+  <button id="toggleBandung">Toggle Bandung</button>
 
   <script src="jquery-3.6.0.min.js"></script>
   <script>
@@ -39,6 +40,9 @@
 
       $("#hideBandung").on("click", function () {
         $(".bandung").slideUp();
+      });
+      $("#toggleBandung").on("click", function () {
+        $(".bandung").fadeToggle();
       });
     });
   </script>
