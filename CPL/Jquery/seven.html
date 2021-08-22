@@ -24,12 +24,22 @@
     <li class="sukabumi">Sukabumi</li>
     <li class="jogja">Yogyakarta</li>
   </ul>
+  <button id="gantiBandungJadiBiru">Ganti Biru!</button>
+  <button id="gantiBandungJadiMerah">Ganti Merah!</button>
 
   <script src="jquery-3.6.0.min.js"></script>
   <script>
     // Mencoba manipulasi css dalam javascript
     $("document").ready(function () {
-      $(".bandung").addClass("merah");
+      // $(".bandung").addClass("merah");
+      $("#gantiBandungJadiBiru").on("click", function () {
+        $(".bandung").removeClass("merah");
+        $(".bandung").addClass("biru");
+      });
+      $("#gantiBandungJadiMerah").on("click", function () {
+        $(".bandung").removeClass("biru");
+        $(".bandung").addClass("merah");
+      });
     });
   </script>
 </body>
