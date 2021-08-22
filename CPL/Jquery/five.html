@@ -14,6 +14,7 @@
     <li class="bandung">
       Bandung
       <button id="keBandung">Pergi!</button>
+      <button id="hapusBandung">X</button>
     </li>
     <li class="sukabumi">
       Sukabumi
@@ -29,6 +30,10 @@
     $("document").ready(function () {
       $("#keBandung").on("click", function () {
         alert("Saya Akan Pergi ke Bandung");
+      });
+      $("#hapusBandung").on("click", function () {
+        $(".bandung").remove();
+        alert("Bandung dihapus");
       });
     });
   </script>
