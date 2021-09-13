@@ -1,4 +1,10 @@
 const { averageExams, isStudentPassExam } = require('../gradeCalculations');
+
+// Multiple Case
+test('it should handle non-number ', () => {
+  const listValueOfExams = [80, 'a', '100', 80];
+  expect(() => averageExams(listValueOfExams)).toThrow();
+})
  
 describe('grade calculations', () => {
     test('it should return exact average', () => {
