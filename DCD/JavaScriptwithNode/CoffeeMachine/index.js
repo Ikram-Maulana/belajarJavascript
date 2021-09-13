@@ -1,12 +1,10 @@
+// Penggunaan Lodash
+const _ = require('lodash');
 
+const myArray = [10, 21, 30];
+const sum = _.sum(myArray);
 
-// Penggunaan lodash
-// const _ = require('lodash');
-
-// const myArray = [10,21,30];
-// const sum = _.sum(myArray);
-
-// console.log(sum);
+console.log(sum);
 
 // console.log("Menyalakan mesin kopi");
 // console.log("Menggiling biji kopi");
