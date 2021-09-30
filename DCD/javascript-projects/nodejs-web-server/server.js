@@ -1,8 +1,10 @@
 const http = require("http");
 
 const requestListener = (request, response) => {
-  response.setHeader('Content-Type', 'text/html');
+  // response.setHeader('Content-Type', 'text/html');
   // response.statusCode = 200;
+  response.setHeader("Content-Type", "application/json");
+  response.setHeader("X-Powered-By", "NodeJS");
 
   const {
     method,
@@ -14,18 +16,24 @@ const requestListener = (request, response) => {
     if (method === "GET") {
       // response bila client menggunakan GET
       response.statusCode = 200;
-      response.end("<h1>Ini adalah homepage</h1>");
+      response.end(JSON.stringify({
+        message: "Ini adalah homepage"
+      }));
     } else {
       // response bila client tidak menggunakan GET
       response.statusCode = 400;
-      response.end(`<h1>Halaman tidak dapat diakses dengan ${method} request</h1>`);
+      response.end(JSON.stringify({
+        message: `Halaman tidak dapat diakses dengan ${method} request`
+      }));
     }
   } else if (url === "/about") {
     // TODO 3: logika respons bila url bernilai '/about'
     if (method === "GET") {
       // response bila client menggunakan GET
       response.statusCode = 200;
-      response.end("<h1>Ini adalah about</h1>");
+      response.end(JSON.stringify({
+        message: "Ini adalah about"
+      }));
     } else if (method === "POST") {
       // respons bila client menggunakan POST
       let body = [];
@@ -41,18 +49,24 @@ const requestListener = (request, response) => {
         } = JSON.parse(body);
         response.statusCode = 200;
         response.end(
-          `<h1>Halo, ${name}! ini adalah halaman About</h1>`
+          JSON.stringify({
+            message: `Halo, ${name}! ini adalah halaman About`
+          })
         );
       })
     } else {
       // response bila client tidak menggunakan GET
       response.statusCode = 400;
-      response.end(`<h1>Halaman tidak dapat diakses dengan ${method} request</h1>`);
+      response.end(JSON.stringify({
+        message: `Halaman tidak dapat diakses dengan ${method} request`
+      }));
     }
   } else {
     // TODO 1: logika respons bila url bukan '/' atau '/about'
     response.statusCode = 404;
-    response.end("<h1>Halaman tidak ditemukan!</h1>");
+    response.end(JSON.stringify({
+      message: "Halaman tidak ditemukan!"
+    }));
   }
 
   // if (method === "GET") {
