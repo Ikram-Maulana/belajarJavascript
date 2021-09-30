@@ -33,6 +33,14 @@ const routes = [{
       const {
         name = "stranger"
       } = request.params;
+      const {
+        lang
+      } = request.query;
+
+      if (lang === "id") {
+        return `Hai, ${name}!`;
+      }
+
       return `hello ${name}!`;
     }
   },
